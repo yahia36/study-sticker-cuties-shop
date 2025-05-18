@@ -1,0 +1,213 @@
+
+:root {
+  --background: 340 100% 99%;
+  --foreground: 240 10% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 20%;
+  --primary: 330 100% 90%;
+  --primary-foreground: 330 50% 30%;
+  --secondary: 220 100% 94%;
+  --secondary-foreground: 220 40% 40%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 60 100% 90%;
+  --accent-foreground: 60 40% 30%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 340 70% 94%;
+  --input: 340 70% 94%;
+  --ring: 340 70% 90%;
+  --radius: 1rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.font-cute {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+.bg-softpink {
+  background-color: hsl(330, 100%, 90%);
+}
+
+.bg-softpink\/20 {
+  background-color: hsla(330, 100%, 90%, 0.2);
+}
+
+.bg-softpink\/10 {
+  background-color: hsla(330, 100%, 90%, 0.1);
+}
+
+.bg-softpink\/30 {
+  background-color: hsla(330, 100%, 90%, 0.3);
+}
+
+.border-softpink {
+  border-color: hsl(330, 100%, 90%);
+}
+
+.border-softpink\/20 {
+  border-color: hsla(330, 100%, 90%, 0.2);
+}
+
+.border-softpink\/30 {
+  border-color: hsla(330, 100%, 90%, 0.3);
+}
+
+.text-softpink {
+  color: hsl(330, 100%, 90%);
+}
+
+.bg-softpurple {
+  background-color: #9b87f5;
+}
+
+.bg-softpurple\/80 {
+  background-color: rgba(155, 135, 245, 0.8);
+}
+
+.bg-softpurple\/20 {
+  background-color: rgba(155, 135, 245, 0.2);
+}
+
+.bg-softpurple\/10 {
+  background-color: rgba(155, 135, 245, 0.1);
+}
+
+.text-softpurple {
+  color: #9b87f5;
+}
+
+.bg-softyellow {
+  background-color: #FEF7CD;
+}
+
+.bg-softyellow\/30 {
+  background-color: rgba(254, 247, 205, 0.3);
+}
+
+.bg-softgreen {
+  background-color: #F2FCE2;
+}
+
+.bg-softblue {
+  background-color: #D3E4FD;
+}
+
+.bg-softblue\/30 {
+  background-color: rgba(211, 228, 253, 0.3);
+}
+
+.bg-softorange {
+  background-color: #FEC6A1;
+}
+
+.text-softorange {
+  color: #FEC6A1;
+}
+
+.fill-softorange {
+  fill: #FEC6A1;
+}
+
+.bg-softgray\/30 {
+  background-color: rgba(241, 240, 251, 0.3);
+}
+
+.bg-softgray\/40 {
+  background-color: rgba(241, 240, 251, 0.4);
+}
+
+/* Custom animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Product card hover animation */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* Global scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Toast notifications */
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.toast {
+  background-color: white;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 300px;
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

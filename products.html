@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Sticky Studies</title>
+    <meta name="description" content="Browse our collection of cute motivational study stickers, bookmarks & stationery" />
+    <meta name="author" content="Sticky Studies" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body class="bg-background text-foreground min-h-screen flex flex-col font-cute">
+    <header id="navbar"></header>
+    
+    <main class="flex-grow py-10">
+      <div class="container">
+        <div class="mb-8">
+          <h1 class="text-3xl md:text-4xl font-bold mb-3">
+            Our Sticker Collection
+          </h1>
+          <p class="text-muted-foreground">
+            Discover our handcrafted stickers, bookmarks, and planner accessories
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <!-- Filters Sidebar -->
+          <div class="lg:col-span-1">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-softpink/20 sticky top-24">
+              <h2 class="font-medium text-lg mb-4">Filters</h2>
+              
+              <!-- Search -->
+              <div class="mb-6">
+                <h3 class="text-sm font-medium mb-2">Search</h3>
+                <div class="relative">
+                  <span class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Search stickers..."
+                    class="pl-10 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    id="search-input"
+                  />
+                </div>
+              </div>
+              
+              <div class="my-4 border-t border-border"></div>
+              
+              <!-- Categories -->
+              <div class="mb-6">
+                <h3 class="text-sm font-medium mb-3">Categories</h3>
+                <div class="space-y-2" id="category-filters">
+                  <!-- Category checkboxes will be generated here -->
+                </div>
+              </div>
+              
+              <div class="my-4 border-t border-border"></div>
+              
+              <!-- Price Range -->
+              <div>
+                <h3 class="text-sm font-medium mb-4">Price Range</h3>
+                <div id="price-range-container">
+                  <input type="range" min="0" max="10" step="0.5" value="0" class="w-full" id="price-range-min">
+                  <input type="range" min="0" max="10" step="0.5" value="10" class="w-full" id="price-range-max">
+                  <div class="flex justify-between mt-2 text-sm text-muted-foreground">
+                    <span id="price-min-display">$0.00</span>
+                    <span id="price-max-display">$10.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Products Grid -->
+          <div class="lg:col-span-3">
+            <div id="products-count" class="mb-4 text-sm text-muted-foreground"></div>
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Products will be generated here -->
+            </div>
+            <div id="no-products-message" class="bg-softgray/30 rounded-xl p-10 text-center hidden">
+              <h3 class="text-xl font-medium mb-2">No products found</h3>
+              <p class="text-muted-foreground">
+                Try adjusting your filters or search term
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer id="footer"></footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/productCard.js"></script>
+    <script src="/js/products.js"></script>
+  </body>
+</html>

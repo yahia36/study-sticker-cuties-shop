@@ -16,12 +16,37 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@stickystudies" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
+  <body class="bg-background text-foreground min-h-screen flex flex-col font-cute">
+    <header id="navbar"></header>
+    
+    <main class="flex-grow">
+      <section id="hero-section"></section>
+      <section id="featured-products"></section>
+      <section id="testimonial-section"></section>
+      <section id="instagram-section"></section>
+      <section id="cta-section"></section>
+    </main>
+    
+    <footer id="footer"></footer>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!-- JavaScript -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/components/heroSection.js"></script>
+    <script src="/js/components/featuredProducts.js"></script>
+    <script src="/js/components/testimonialSection.js"></script>
+    <script src="/js/components/instagramSection.js"></script>
+    <script src="/js/components/ctaSection.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
