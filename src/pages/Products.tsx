@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -140,12 +140,12 @@ const Products = () => {
   };
   
   // Apply filters when dependencies change
-  React.useEffect(() => {
+  useEffect(() => {
     filterProducts();
   }, [searchTerm, selectedCategories, priceRange]);
   
   // Set initial category from URL parameter
-  React.useEffect(() => {
+  useEffect(() => {
     if (initialCategory) {
       const matchingCategory = categories.find(
         cat => cat.toLowerCase().includes(initialCategory.toLowerCase())
