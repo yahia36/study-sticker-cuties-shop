@@ -8,9 +8,11 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.10",
     "@radix-ui/react-alert-dialog": "^1.1.13",
     "@radix-ui/react-aspect-ratio": "^1.1.6",
     "@radix-ui/react-avatar": "^1.1.9",
+    "@radix-ui/react-popover": "^1.1.13",
     "@tanstack/react-query": "^5.76.1",
     "@types/react-dom": "^19.1.5",
     "body-parser": "^1.20.2",
@@ -24,6 +26,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
+    "recharts": "^2.15.3",
     "tailwind-merge": "^3.3.0",
     "vaul": "^1.1.2"
   },
